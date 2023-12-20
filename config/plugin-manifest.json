@@ -1,0 +1,29 @@
+{
+  "name": "observability-ui-hub",
+  "version": "0.0.1",
+  "displayName": "Observability UI Hub",
+  "description": "This plugin adds the observability UI Hub to install console plugins related to observability",
+  "dependencies": {
+    "@console/pluginAPI": "*"
+  },
+  "extensions": [
+    {
+      "type": "console.page/route",
+      "properties": {
+        "exact": true,
+        "path": "/observability-ui/catalog",
+        "component": { "$codeRef": "CatalogPage" }
+      }
+    },
+    {
+      "type": "console.navigation/href",
+      "properties": {
+        "id": "ui-catalog",
+        "name": "Catalog",
+        "href": "/observability-ui/catalog",
+        "perspective": "admin",
+        "section": "observe"
+      }
+    }
+  ]
+}
