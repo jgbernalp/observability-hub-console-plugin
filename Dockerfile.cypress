@@ -1,0 +1,17 @@
+FROM cypress/included:9.6.0
+
+WORKDIR /usr/src/app
+
+ENV HUSKY=0
+
+COPY web/package*.json .
+RUN npm ci
+
+COPY web/ /usr/src/app/
+
+RUN mkdir -p /.config
+RUN chmod 775 -R /.config
+
+RUN npm run build:standalone
+
+ENTRYPOINT ["npm", "run", "test:e2e"]

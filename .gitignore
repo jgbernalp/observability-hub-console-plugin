@@ -1,0 +1,14 @@
+web/node_modules/
+web/dist/
+web/dist-standalone/
+web/scripts/env.list
+web/cypress/videos/
+web/cypress/screenshots/
+web/coverage/
+web/.nyc_output/
+.DS_Store
+/plugin-backend
+env.list
+.vscode
+hack/docker-compose/docker-compose-logs
+test-certs

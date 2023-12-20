@@ -1,0 +1,20 @@
+[
+  {
+    "type": "console.page/route",
+    "properties": {
+      "exact": true,
+      "path": "/observability-ui/catalog",
+      "component": { "$codeRef": "CatalogPage" }
+    }
+  },
+  {
+    "type": "console.navigation/href",
+    "properties": {
+      "id": "ui-catalog",
+      "name": "Catalog",
+      "href": "/observability-ui/catalog",
+      "perspective": "admin",
+      "section": "observe"
+    }
+  }
+]
